@@ -1,0 +1,24 @@
+{
+  "name": "daniil/business-lanches",
+  "description": "Service for collect business lunches",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Daniil Domrachev",
+      "email": "d.domrachev@bronevik.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Core\\": "Core/",
+      "App\\": "app/"
+    }
+  },
+  "require": {
+    "gabordemooij/redbean": "^5.7",
+    "nesbot/carbon": "^2.58",
+    "twig/twig": "^3.4",
+    "slim/slim": "^4.10",
+    "ext-http": "*"
+  }
+}
