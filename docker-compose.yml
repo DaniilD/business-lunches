@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  nginx:
+    image: nginx:1.23.1
+    command: ["/usr/sbin/nginx", "-g", "daemon off;"]
+    working_dir: /srv
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - .:/srv:ro
+      - ./build/etc/nginx/conf.d/:/etc/nginx/conf.d/:ro
+
+  php:
+    build:
+      context: .
+      dockerfile: ./build/Dockerfile
+    working_dir: /srv
+    restart: unless-stopped
+    volumes:
+      - .:/srv:ro

@@ -19,6 +19,7 @@
     "nesbot/carbon": "^2.58",
     "twig/twig": "^3.4",
     "slim/slim": "^4.10",
-    "ext-http": "*"
+    "ext-http": "*",
+    "slim/twig-view": "^3.3"
   }
 }
