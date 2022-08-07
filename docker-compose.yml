@@ -18,5 +18,7 @@ services:
       dockerfile: ./build/Dockerfile
     working_dir: /srv
     restart: unless-stopped
+    expose:
+      - 9000
     volumes:
       - .:/srv:ro
